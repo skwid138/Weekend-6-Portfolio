@@ -1,6 +1,6 @@
 var myApp = angular.module('myApp', ['ngRoute']);
 
-/// Routes ///
+/// Client Side Routes ///
 myApp.config(function($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix('');
 
@@ -8,5 +8,5 @@ myApp.config(function($routeProvider, $locationProvider) {
     .when('/', {
       templateUrl: '/views/user.html',
       controller: 'UserController as uc',
-    });
-});
+    }); // end routeProvider
+}); // end config
