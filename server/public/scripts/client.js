@@ -8,5 +8,14 @@ myApp.config(function($routeProvider, $locationProvider) {
     .when('/', {
       templateUrl: '/views/user.html',
       controller: 'UserController as uc',
-    }); // end routeProvider
+    })
+    .when('/home',{
+      templateUrl: '/views/home.html',
+      controller: 'HomeController as hc'
+    })
+    .when('/portfolio', {
+      templateUrl: '/views/portfolio.html',
+      controller: 'PortfolioController as pc'
+    })
+    .otherwise('/home'); // end routeProvider
 }); // end config
