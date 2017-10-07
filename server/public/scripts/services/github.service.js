@@ -1,8 +1,11 @@
 myApp.service('GithubService', function ($http) {
   var self = this;
-  // Object that will store our user data
 
+  // Object that will store our user data
   self.user = {data: {}};
+
+  // Object that will store our repo data
+  self.repos = { data: [] };
 
   //Call to Github API to fetch user's profile info
   self.githubProfile = function () {
@@ -12,11 +15,9 @@ myApp.service('GithubService', function ($http) {
     }).then(function (response) {
       console.log(response.data);
       self.user.data = response.data;
-    });
-  }
-
-  // Object that will store our repo data
-  self.repos = { data: [] };
+    }); // end $http
+  }; // end githubProfile
+  
   //Call to Github API to fetch list of user's repos
   self.githubRepos = function () {
     $http({
@@ -25,6 +26,6 @@ myApp.service('GithubService', function ($http) {
     }).then(function (response) {
       console.log(response.data);
       self.repos.data = response.data;
-    });
-  }
-});
+    }); // end $http
+  }; // end githubRepos
+}); // end service
