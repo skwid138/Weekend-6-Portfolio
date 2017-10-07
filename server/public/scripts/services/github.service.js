@@ -13,7 +13,7 @@ myApp.service('GithubService', function ($http) {
       method: 'GET',
       url: '/github/user/',
     }).then(function (response) {
-      console.log(response.data);
+      console.log('githubProfile, get response.data ->', response.data);
       self.user.data = response.data;
     }); // end $http
   }; // end githubProfile
@@ -24,7 +24,7 @@ myApp.service('GithubService', function ($http) {
       method: 'GET',
       url: '/github/repos/'
     }).then(function (response) {
-      console.log(response.data);
+      console.log('githubRepos, get response.data ->', response.data);
       self.repos.data = response.data;
     }); // end $http
   }; // end githubRepos

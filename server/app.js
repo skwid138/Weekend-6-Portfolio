@@ -62,5 +62,5 @@ app.get('/github/repos', function (req, res) {
 
 // listening
 app.listen(port, function () {
-  console.log('localhost running on port', port);
+  console.log('listening on port', port);
 }); // end listen
