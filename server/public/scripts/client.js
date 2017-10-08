@@ -3,22 +3,18 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngMaterial']);
 myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
   $locationProvider.hashPrefix('');
 
-  // sets color pallet
+  // sets color pallet for cards
   $mdThemingProvider.setDefaultTheme();
 
   /// Client Side Routes ///
-  $routeProvider
-    .when('/', {
+  $routeProvider.when('/', {
       templateUrl: '/views/home.html',
       controller: 'HomeController as hc',
-    })
-    .when('/about',{
+    }).when('/about',{
       templateUrl: '/views/about.html',
       controller: 'AboutController as ac'
-    })
-    .when('/portfolio', {
+    }).when('/portfolio', {
       templateUrl: '/views/portfolio.html',
       controller: 'PortfolioController as pc'
-    })
-    .otherwise('/'); // end routeProvider
+    }).otherwise('/'); // end routeProvider
 }); // end config

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <!-- Angular Material -->
     <link href="vendors/angular-material/angular-material.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 
     <!-- Angular and Angular-Route -->
     <script src="vendors/angular.js" charset="utf-8"></script>
@@ -24,7 +25,7 @@
     <script src="scripts/client.js" charset="utf-8"></script>
     <!-- Controllers -->
     <script src="scripts/controllers/home.controller.js" charset="utf-8"></script>
-    <script src="scripts/controllers/user.controller.js" charset="utf-8"></script>
+    <script src="scripts/controllers/about.controller.js" charset="utf-8"></script>
     <script src="scripts/controllers/portfolio.controller.js" charset="utf-8"></script>
     <!-- Services -->
     <script src="scripts/services/github.service.js" charset="utf-8"></script>
@@ -34,14 +35,10 @@
     <header>
       <div ng-controller="HomeController as HC" ng-cloak>
         <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-          <md-nav-item md-nav-href="/#!/Home" name="home">Home</md-nav-item>
-          <md-nav-item md-nav-href="/#!/About" name="about">About Me</md-nav-item>
-          <md-nav-item md-nav-href="/#!/Code" name="code">For Sale</md-nav-item>
+          <md-nav-item md-nav-href="/#!/home" name="home">Home</md-nav-item>
+          <md-nav-item md-nav-href="/#!/about" name="about">About Me</md-nav-item>
+          <md-nav-item md-nav-href="/#!/portfolio" name="code">Code</md-nav-item>
         </md-nav-bar>
-      </div>
-      <div layout-padding layout-margin id="head">
-        <h1>Hunter Rancourt</h1>
-        <h3>Software Engineer</h3>
       </div>
     </header>
     <main>
