@@ -2,21 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Projects</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/styles.css">
+    <!-- Angular Material -->
+    <link href="vendors/angular-material/angular-material.css" rel="stylesheet" type="text/css">
 
     <!-- Angular and Angular-Route -->
     <script src="vendors/angular.js" charset="utf-8"></script>
     <script src="vendors/angular-route.js" charset="utf-8"></script>
 
     <!-- Angular Material -->
-    <link href="vendors/material/angular-material.css" rel="stylesheet" type="text/css">
-    <script src="vendors/material/angular-animate.min.js" charset="utf-8" type="text/javascript"></script>
-    <script src="vendors/material/angular-aria.min.js" charset="utf-8" type="text/javascript"></script>
-    <script src="vendors/material/angular-messages.min.js" charset="utf-8" type="text/javascript"></script>
-    <script src="vendors/material/angular-material.js" charset="utf-8" type="text/javascript"></script>
+    <script src="vendors/angular-material/angular-animate.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="vendors/angular-material/angular-aria.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="vendors/angular-material/angular-messages.min.js" charset="utf-8" type="text/javascript"></script>
+    <script src="vendors/angular-material/angular-material.js" charset="utf-8" type="text/javascript"></script>
 
     <!-- ********* Client Side ********* -->
     <script src="scripts/client.js" charset="utf-8"></script>
@@ -28,9 +30,19 @@
     <script src="scripts/services/github.service.js" charset="utf-8"></script>
 
   </head>
-  <body ng-app="myApp">
+  <body ng-app="myApp" md-theme="default">
     <header>
-      <h1>Hello World</h1>
+      <div ng-controller="HomeController as HC" ng-cloak>
+        <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+          <md-nav-item md-nav-href="/#!/Home" name="home">Home</md-nav-item>
+          <md-nav-item md-nav-href="/#!/About" name="about">About Me</md-nav-item>
+          <md-nav-item md-nav-href="/#!/Code" name="code">For Sale</md-nav-item>
+        </md-nav-bar>
+      </div>
+      <div layout-padding layout-margin id="head">
+        <h1>Hunter Rancourt</h1>
+        <h3>Software Engineer</h3>
+      </div>
     </header>
     <main>
       <ng-view></ng-view>
