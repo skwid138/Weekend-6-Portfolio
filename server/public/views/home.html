@@ -10,19 +10,19 @@
                 </md-card-title>
                 <md-card-actions layout="row" layout-align="start center">
                     <md-card-icon-actions>
-                        <md-button class="md-icon-button" aria-label="GitHub" ng-href="">
+                        <md-button class="md-icon-button" aria-label="GitHub" ng-href="{{hc.user.data.html_url}}" target="_blank">
                             <md-icon md-svg-icon="images/icons/github.svg"></md-icon>
                         </md-button>
-                        <md-button class="md-icon-button" aria-label="LinkedIn">
+                        <md-button class="md-icon-button" aria-label="LinkedIn" ng-href="https://www.linkedin.com/in/hunter-rancourt/" target="_blank">
                             <md-icon md-svg-icon="images/icons/linkedin.svg"></md-icon>
                         </md-button>
                     </md-card-icon-actions>
-                    <md-button>About Me</md-button>
+                    <md-button ng-click="hc.showAboutMe()">About Me</md-button>
                     <md-button>Code Repos</md-button>
                 </md-card-actions>
-                <md-card-content>
-                    <p>
-                        {{}}
+                <md-card-content id="bio"  class="anchor">
+                    <p ng-show="hc.aboutMe">
+                        {{hc.user.data.bio}}
                     </p>
                 </md-card-content>
             </md-card>

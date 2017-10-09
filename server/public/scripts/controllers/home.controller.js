@@ -1,26 +1,20 @@
-myApp.controller('HomeController', function (GithubService, ViewsService) {
+myApp.controller('HomeController', function (GithubService, ViewsService, $location, $anchorScroll) {
   console.log('HomeController loaded.');
   var vm = this;
 
-  // for ng-include
-  vm.aboutUrl = '';
-  vm.setAboutUrl = function() {
-    console.log('in setAboutUrl');
-    
-    vm.aboutUrl = '/views/about.html';
-  }; // end aboutUrl
-  
-
-    // for ng-include
-  vm.code = { name: 'code',
-      url: '/views/portfolio.html'
-    }; // end vm.code
-
   // github user data
   vm.user = GithubService.user;
-
   // github repo data
   vm.repos = GithubService.repos;
+
+  vm.aboutMe = false;
+  // toggles aboutMe to show bio
+  vm.showAboutMe = function() {
+    console.log('in showAboutMe');
+    vm.aboutMe = !vm.aboutMe;
+    $location.hash('bio');
+    $anchorScroll();
+  }; // end showAboutMe
 
 
 
