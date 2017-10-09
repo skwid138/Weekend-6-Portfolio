@@ -1,16 +1,33 @@
-<section layout="row" layout-align="center start">
-    <div>
-        <md-card layout-padding>
-            <md-card-content class="card-content-height">
-            <h1 class="md-display-2 name-margin">Hunter Rancourt</h1>
-            </md-card-content>
-            <img class="md-card-image picture" src="../images/hunter.JPG" />
-            <md-card-footer>
-                <h3 class="md-title">Software Engineer</h3>
-            </md-card-footer>
-        </md-card>
-    </div>
-    
+<section>
+    <md-content class="md-padding" layout-xs="column" layout="row" layout-align="center start">
+        <div flex-xs flex-gt-xs="50" layout="column">
+            <md-card>
+                <img layout-padding ng-src="images/hunter.JPG" class="md-card-image">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Hunter Rancourt</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="start center">
+                    <md-card-icon-actions>
+                        <md-button class="md-icon-button" aria-label="GitHub" ng-href="">
+                            <md-icon md-svg-icon="images/icons/github.svg"></md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="LinkedIn">
+                            <md-icon md-svg-icon="images/icons/linkedin.svg"></md-icon>
+                        </md-button>
+                    </md-card-icon-actions>
+                    <md-button>About Me</md-button>
+                    <md-button>Code Repos</md-button>
+                </md-card-actions>
+                <md-card-content>
+                    <p>
+                        {{}}
+                    </p>
+                </md-card-content>
+            </md-card>
+        </div>
+    </md-content>
+</section>
     <!-- <div>{{uc.user.data}}</div> -->
     <!-- <div>{{uc.repos.data}}</div> -->
-</section>

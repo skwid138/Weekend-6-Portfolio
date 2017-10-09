@@ -29,20 +29,15 @@
     <script src="scripts/controllers/portfolio.controller.js" charset="utf-8"></script>
     <!-- Services -->
     <script src="scripts/services/github.service.js" charset="utf-8"></script>
+    <script src="scripts/services/views.service.js" charset="utf-8"></script>
 
   </head>
   <body ng-app="myApp" md-theme="default">
     <header>
-      <div ng-controller="HomeController as HC" ng-cloak layout="row" layout-align="center start">
-        <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-          <md-nav-item md-nav-href="/#!/home" name="home">Home</md-nav-item>
-          <md-nav-item md-nav-href="/#!/about" name="about">About Me</md-nav-item>
-          <md-nav-item md-nav-href="/#!/portfolio" name="code">Code</md-nav-item>
-        </md-nav-bar>
-      </div>
     </header>
     <main>
       <ng-view></ng-view>
+      <ng-include></ng-include>
     </main>
     <footer>
 
