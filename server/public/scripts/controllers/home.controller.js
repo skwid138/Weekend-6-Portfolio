@@ -1,4 +1,4 @@
-myApp.controller('HomeController', function (GithubService, ViewsService, $location, $anchorScroll) {
+myApp.controller('HomeController', function (GithubService, $location, $anchorScroll) {
   console.log('HomeController loaded.');
   var vm = this;
 

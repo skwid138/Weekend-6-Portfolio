@@ -10,11 +10,5 @@ myApp.config(function ($routeProvider, $locationProvider, $mdThemingProvider) {
   $routeProvider.when('/', {
       templateUrl: '/views/home.html',
       controller: 'HomeController as hc',
-    }).when('/about',{
-      templateUrl: '/views/about.html',
-      controller: 'AboutController as ac'
-    }).when('/portfolio', {
-      templateUrl: '/views/portfolio.html',
-      controller: 'PortfolioController as pc'
     }).otherwise('/'); // end routeProvider
 }); // end config
