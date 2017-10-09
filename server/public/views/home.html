@@ -18,12 +18,15 @@
                         </md-button>
                     </md-card-icon-actions>
                     <md-button ng-click="hc.showAboutMe()">About Me</md-button>
-                    <md-button>Code Repos</md-button>
+                    <md-button ng-click="hc.showRepos()">Code Repositories</md-button>
                 </md-card-actions>
                 <md-card-content id="bio"  class="anchor">
-                    <p ng-show="hc.aboutMe">
+                    <p ng-hide="hc.aboutMe">
                         {{hc.user.data.bio}}
                     </p>
+                    <div id="repo" ng-show="hc.myRepos" ng-repeat="repo in hc.repos.data">
+                        <a href="repo.html_url">{{repo.name}}</a>
+                    </div>
                 </md-card-content>
             </md-card>
         </div>
